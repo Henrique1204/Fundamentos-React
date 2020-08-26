@@ -1,4 +1,10 @@
+import React from "react";
 import ReactDOM from "react-dom";
 
 const elemento = document.getElementById("root");
-ReactDOM.render("Olá React", elemento);
+const tag = <strong>Olá React!</strong>
+
+ReactDOM.render(
+    <div>{tag}</div>,
+    elemento
+);
