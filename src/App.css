@@ -1,0 +1,13 @@
+#App .Cards {
+    padding: 20px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+@media (max-width: 440px) {
+    .cards {
+        padding: 10px;
+    }
+}
