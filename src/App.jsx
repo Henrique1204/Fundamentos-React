@@ -4,6 +4,8 @@ import ComParametros from "./componentes/basicos/ComParametros";
 import Fragmento from "./componentes/basicos/Fragmento";
 import Aleatorio from "./componentes/basicos/Aleatorio";
 import Card from "./componentes/layout/Card";
+import Familia from "./componentes/basicos/Familia";
+import FamiliaMembro from "./componentes/basicos/FamiliaMembro";
 import "./App.css";
 
 // Funcção reduzida, só vai funcionar com o export default
@@ -13,6 +15,13 @@ export default () => (
     <div id="App">
         <h1>Fundamentos do React</h1>
         <div className="Cards">
+            <Card titulo="#5 - Componente com filho" color="#F06">
+                <Familia sobrenome="Santos">
+                    <FamiliaMembro nome="Paulo" />
+                    <FamiliaMembro nome="Silva" />
+                    <FamiliaMembro nome="Henrique" />
+                </Familia>
+            </Card>
             <Card titulo="#4 - Numero Aleatório" color="#0F6">
                 <Aleatorio maximo={10} minimo={1} />
             </Card>
