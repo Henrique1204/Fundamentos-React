@@ -6,15 +6,16 @@ import Aleatorio from "./componentes/basicos/Aleatorio";
 import Card from "./componentes/layout/Card";
 import Familia from "./componentes/basicos/Familia";
 import FamiliaMembro from "./componentes/basicos/FamiliaMembro";
+import ListaAlunos from "./componentes/Repeticao/ListaAlunos";
 import "./App.css";
 
-// Funcção reduzida, só vai funcionar com o export default
-// pq os outros export precisam do nome para serem referenciados na hora do import
-// O parânteses serve para indicar a expressão, porém funciona sem tbm
 export default () => (
     <div id="App">
         <h1>Fundamentos do React</h1>
         <div className="Cards">
+            <Card titulo="#6 - Repeticao" color="#06F">
+                <ListaAlunos></ListaAlunos>
+            </Card>
             <Card titulo="#5 - Componente com filho" color="#F06">
                 <Familia sobrenome="Santos">
                     <FamiliaMembro nome="Paulo" />
