@@ -1,0 +1,7 @@
+table {
+    margin: 0 auto;
+}
+
+table, table * {
+    border: 1px solid #000;
+}
