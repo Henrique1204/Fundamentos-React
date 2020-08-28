@@ -3,15 +3,17 @@ import produtos from "../../data/produtos";
 import "./TabelaProdutos.css";
 
 export default () => {
-    const linhasProdutos = produtos.map((produto) => {
-        return (
-            <tr key={ produto["id"] } >
-                <td>{ produto["id"] }</td>
-                <td>{ produto["nome"] }</td>
-                <td>{ produto["preco"] }</td>
-            </tr>
-        );
-    });
+    function getLinhas(lista) {
+        return lista.map((item) => {
+            return (
+                <tr key={ item["id"] } >
+                    <td>{ item["id"] }</td>
+                    <td>{ item["nome"] }</td>
+                    <td>{ item["preco"] }</td>
+                </tr>
+            );
+        });
+    }
 
     return (
         <table>
@@ -23,7 +25,7 @@ export default () => {
                 </tr>
             </thead>
             <tbody>
-                { linhasProdutos }
+                { getLinhas(produtos) }
             </tbody>
         </table>
     )

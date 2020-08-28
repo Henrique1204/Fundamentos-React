@@ -1,7 +1,16 @@
 table {
-    margin: 0 auto;
+    width: 100%;
+    color: #F4F4F4;
 }
 
-table, table * {
-    border: 1px solid #000;
+thead {
+    background-color: #222;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #AAA;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #777;
 }
