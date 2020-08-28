@@ -10,13 +10,17 @@ import ListaAlunos from "./componentes/repeticao/ListaAlunos";
 import TabelaProdutos from "./componentes/repeticao/TabelaProdutos";
 import ParOuImpar from "./componentes/condicional/ParOuImpar";
 import UsuarioInfo from "./componentes/condicional/UsuarioInfo";
+import DireitaPai from "./componentes/comunicacao/DiretaPai";
 import "./App.css";
 
 export default () => (
     <div id="App">
         <h1>Fundamentos do React</h1>
         <div className="Cards">
-            <Card titulo="#6 - Condicional">
+            <Card titulo="#9 - Comunicação" color="#F60">
+                <DireitaPai />
+            </Card>
+            <Card titulo="#8 - Condicional">
                 <ParOuImpar numero={3} />
                 <UsuarioInfo usuario={ { nome: "Paulo" } } />
             </Card>
