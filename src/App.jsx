@@ -6,19 +6,25 @@ import Aleatorio from "./componentes/basicos/Aleatorio";
 import Card from "./componentes/layout/Card";
 import Familia from "./componentes/basicos/Familia";
 import FamiliaMembro from "./componentes/basicos/FamiliaMembro";
-import ListaAlunos from "./componentes/Repeticao/ListaAlunos";
-import TabelaProdutos from "./componentes/Repeticao/TabelaProdutos";
+import ListaAlunos from "./componentes/repeticao/ListaAlunos";
+import TabelaProdutos from "./componentes/repeticao/TabelaProdutos";
+import ParOuImpar from "./componentes/condicional/ParOuImpar";
+import UsuarioInfo from "./componentes/condicional/UsuarioInfo";
 import "./App.css";
 
 export default () => (
     <div id="App">
         <h1>Fundamentos do React</h1>
         <div className="Cards">
+            <Card titulo="#6 - Condicional">
+                <ParOuImpar numero={3} />
+                <UsuarioInfo usuario={ { nome: "Paulo" } } />
+            </Card>
             <Card titulo="#7 - Repeticao Produtos" color="#6F0">
-                <TabelaProdutos></TabelaProdutos>
+                <TabelaProdutos />
             </Card>
             <Card titulo="#6 - Repeticao Alunos" color="#06F">
-                <ListaAlunos></ListaAlunos>
+                <ListaAlunos />
             </Card>
             <Card titulo="#5 - Componente com filho" color="#F06">
                 <Familia sobrenome="Santos">
