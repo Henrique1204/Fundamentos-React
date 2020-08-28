@@ -10,15 +10,19 @@ import ListaAlunos from "./componentes/repeticao/ListaAlunos";
 import TabelaProdutos from "./componentes/repeticao/TabelaProdutos";
 import ParOuImpar from "./componentes/condicional/ParOuImpar";
 import UsuarioInfo from "./componentes/condicional/UsuarioInfo";
-import DireitaPai from "./componentes/comunicacao/DiretaPai";
+import DiretaPai from "./componentes/comunicacao/DiretaPai";
+import IndiretaPai from "./componentes/comunicacao/IndiretaPai";
 import "./App.css";
 
 export default () => (
     <div id="App">
         <h1>Fundamentos do React</h1>
         <div className="Cards">
-            <Card titulo="#9 - Comunicação" color="#F60">
-                <DireitaPai />
+           <Card titulo="#10 - Comunicação Indireta" color="#60F">
+                <IndiretaPai />
+            </Card>
+            <Card titulo="#9 - Comunicação Direta" color="#F60">
+                <DiretaPai />
             </Card>
             <Card titulo="#8 - Condicional">
                 <ParOuImpar numero={3} />
