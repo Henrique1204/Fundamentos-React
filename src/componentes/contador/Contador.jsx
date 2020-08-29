@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import Display from "./Display";
+import PassoForm from "./PassoForm";
+import Botoes from "./Botoes";
 
 class Contador extends Component {
     constructor(props) {
@@ -20,28 +23,23 @@ class Contador extends Component {
         this.setState({ numero: num + passo });
     };
 
-    dec() {
+    dec = () => {
         const {numero: num, passo} = this.state;
 
         this.setState({ numero: num - passo });
     }
 
-    alterarPasso(e) {
-        this.setState({ passo: Number(e.target.value) });
+    alterarPasso(novoPasso) {
+        this.setState({ passo: Number(novoPasso) });
     }
 
     render() {
         return (
             <div>
                 <h2>Contador</h2>
-                <p>{ this.state["numero"] }</p>
-                <form>
-                    <label htmlFor="passo">Passo: </label>
-                    <input type="number" id="passo" name="passo" value={this.state["passo"]} onChange={this.alterarPasso} min="1" />
-                </form>
-                <button type="button" onClick={this.inc}>+</button>
-                {/* Alternativa para fazer a função travar a referência de this na classe */}
-                <button type="button" onClick={() => this.dec()}>-</button>
+                <Display numero={this.state["numero"]} />
+                <PassoForm passo={this.state["passo"]} alterarPasso={this.alterarPasso} />
+                <Botoes incremento={this.inc} decremento={this.dec}  />
             </div>
         )
     }
